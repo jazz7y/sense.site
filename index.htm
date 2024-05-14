@@ -1,0 +1,124 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>| webber.pw |</title>
+    <link rel="stylesheet" href="css/index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" integrity="" crossorigin="anonymous" />
+    <link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <div id="app">
+        <header class="header">
+            <div class="container">
+                <h1 class="header-title">webber.pw</h1>
+            </div>
+        </header>
+        <main class="main">
+            <section class="main-title">
+                <div class="container">
+                    <h1 class="title">webber.pw</h1>
+                    <h3 class="subtitle">Best lua for rockstar.</h3>
+                </div>
+            </section>
+            <section class="main-products">
+                <div class="container">
+                    <div class="product-container">
+                                                    <div class="product-item">
+                                <div class="product-item_header">
+                                    <p>Месяц</p>
+                                </div>
+                                <div class="product-item_content">
+                                    <p class="price">
+                                        <span class="amount">25₽</span>
+                                        <span class="duration">/ месяц</p>
+                                    </p>
+                                    <p class="description">RockStar: 1 Month</p>
+                                    <button class="details" @click="showModal(`0`)">подробнее</button>
+                                </div>
+                            </div>
+                                                    <div class="product-item">
+                                <div class="product-item_header">
+                                    <p>3 Месяца</p>
+                                </div>
+                                <div class="product-item_content">
+                                    <p class="price">
+                                        <span class="amount">50₽</span>
+                                        <span class="duration">/ 3 месяца</p>
+                                    </p>
+                                    <p class="description">RockStar: 3 Month</p>
+                                    <button class="details" @click="showModal(`1`)">подробнее</button>
+                                </div>
+                            </div>
+                                                    <div class="product-item">
+                                <div class="product-item_header">
+                                    <p>9 Месяцев</p>
+                                </div>
+                                <div class="product-item_content">
+                                    <p class="price">
+                                        <span class="amount">100₽</span>
+                                        <span class="duration">/ 9 месяцев</p>
+                                    </p>
+                                    <p class="description">RockStar: 9 Month</p>
+                                    <button class="details" @click="showModal(`2`)">подробнее</button>
+                                </div>
+                            </div>
+                                                    <div class="product-item">
+                                <div class="product-item_header">
+                                    <p>Год</p>
+                                </div>
+                                <div class="product-item_content">
+                                    <p class="price">
+                                        <span class="amount">125₽</span>
+                                        <span class="duration">/ год</p>
+                                    </p>
+                                    <p class="description">RockStar: Year</p>
+                                    <button class="details" @click="showModal(`3`)">подробнее</button>
+                                </div>
+                            </div>
+                                            </div>
+                </div>
+            </section>
+        </main>
+        <div class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p>{{ modal.title }}</p>
+                    <button @click="closeModal" class="modal-close"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="modal-main">
+                    <div>
+                        <ul class="information">
+                            <li v-for="item in modal.information">
+                                <i class="fas fa-check" style="color: green" v-if="item.check"></i>
+                                <i class="fas fa-times" style="color: red" v-else></i>
+                                <span>{{ item.name }}</span>
+                            </li>
+                        </ul>
+                          <div class="gallery">
+                            <a v-for="item in modal.gallery" :href="item"><img :src="item" alt/></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+
+					  <form action="https://discord.com/channels/1235247786983690422/1239240370244550807" target="_blank">
+					     <button>купить                                                 </button>
+                </div>
+				  </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js" integrity="" crossorigin="anonymous"></script>
+    <script src="js/vue.min.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
